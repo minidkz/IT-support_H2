@@ -1,4 +1,6 @@
-#!
+#! /bin/bash
+password='password'
+
 sudo dnf upgrade -y
 hostnamectl set-hostname nisseland.local
 useradd pingu
