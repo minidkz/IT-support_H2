@@ -1,0 +1,3 @@
+adduser 
+password pingu
+usermod pingu -aG wheel
