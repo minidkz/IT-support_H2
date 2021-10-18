@@ -1,9 +1,9 @@
 #! /bin/bash
 password='password'
 
-sudo dnf upgrade -y
+dnf upgrade -y
 hostnamectl set-hostname nisseland.local
 useradd pingu
-passw pingu password
+echo $password | passwd --stdin pingu
 usermod -aG wheel pingu
 sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
