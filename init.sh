@@ -2,7 +2,7 @@
 password='password'
 
 dnf upgrade -y
-hostnamectl set-hostname nisseland.local
+hostnamectl set-hostname jump.nisseland.local
 useradd pingu
 echo $password | passwd --stdin pingu
 usermod -aG wheel pingu
