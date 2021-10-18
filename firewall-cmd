@@ -1,2 +1,9 @@
-firewall-cmd --perm --zone=external –add-forward-port=port=22:proto=tcp:toaddr=192.168.0.2:toport=22 
+nmtui
+nmcli
+
+firewall-cmd --perm --zone=external –add-forward-port=port=22:proto=tcp:toaddr=192.168.0.2:toport=22
+firewall-cmd --perm --change-interface
+firewall-cmd --perm --list-all
+firewall-cmd --perm --zone=internal --remove-service=ssh
+
 firewall-cmd --reload
