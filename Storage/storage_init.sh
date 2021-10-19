@@ -36,7 +36,11 @@ firewall-cmd --perm --zone=internal --remove-service=ssh
 
 #Tilføjer ny Zone
 firewall-cmd --perm --new-zone=secure
+
+#Tilføjer hvilken IP den har adgang til.
 firewall-cmd --perm --zone=secure --add-source=192.168.0.2
+
+#Tilføjer Service.
 firewall-cmd --perm --zone=secure --add-service=ssh
 
 echo "==== Alt er opsat og er klar, maskinen genstarter. ===="
