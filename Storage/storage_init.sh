@@ -3,6 +3,7 @@
 #Opdatering
 echo "Serveren opdateres!"
 dnf upgrade -y -q
+dnf install nano
 echo "==== Serveren er opdateret! ===="
 
 # Ændre hostname
@@ -32,7 +33,7 @@ firewall-cmd --perm --zone=internal --remove-service=mdns
 firewall-cmd --perm --zone=internal --remove-service=samba-client
 firewall-cmd --perm --zone=internal --remove-service=dhcpv6-client
 
-echo "Alt er opsat og er klar, maskinen genstarter."
+echo "==== Alt er opsat og er klar, maskinen genstarter. ===="
 
 #Holder lige 10 sek pause.
 sleep 10s
