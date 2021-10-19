@@ -19,10 +19,10 @@ echo password | passwd pingu --stdin
 sed -i 's/SELINUX=enforcing/SELINUX=permissive/g' /etc/selinux/config
 
 #Fjerner tiladelsen for root til SSH
-sed 'N i PermitRootLogin=no' /etc/ssh/sshd_config
+sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
 
 #Tillader brugeren pingu til SSH adgang
-echo AllowUsers opc pingu >> /etc/ssh/sshd_config
+echo "AllowUsers opc pingu" >> /etc/ssh/sshd_config
 
 #Netværkport ændres til Internal
 firewall-cmd --perm --zone=internal --change-interface=enp1s0 
@@ -32,6 +32,8 @@ firewall-cmd --perm --zone=internal --remove-service=mdns
 firewall-cmd --perm --zone=internal --remove-service=samba-client
 firewall-cmd --perm --zone=internal --remove-service=dhcpv6-client
 
+#Holder lige 10 sek pause.
 sleep 10s
 
+#Genstarter maskinen.
 reboot now
