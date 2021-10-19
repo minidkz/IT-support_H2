@@ -12,5 +12,5 @@ firewall-cmd --perm --zone=internal --change-interface=enp1s0
 firewall-cmd --perm --zone=internal --remove-service=mdns
 firewall-cmd --perm --zone=internal --samba-client
 firewall-cmd --perm --zone=internal --dhcpv6-client
-sleep 5s
+sleep 10s
 reboot now
