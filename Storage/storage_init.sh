@@ -32,6 +32,12 @@ firewall-cmd --perm --zone=internal --change-interface=enp1s0
 firewall-cmd --perm --zone=internal --remove-service=mdns
 firewall-cmd --perm --zone=internal --remove-service=samba-client
 firewall-cmd --perm --zone=internal --remove-service=dhcpv6-client
+firewall-cmd --perm --zone=internal --remove-service=ssh
+
+#Tilføjer ny Zone
+firewall-cmd --perm --new-zone=secure
+firewall-cmd --perm --zone=secure --add-source=192.168.0.2
+firewall-cmd --perm --zone=secure --add-service=ssh
 
 echo "==== Alt er opsat og er klar, maskinen genstarter. ===="
 
