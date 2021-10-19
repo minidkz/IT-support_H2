@@ -32,6 +32,8 @@ firewall-cmd --perm --zone=internal --remove-service=mdns
 firewall-cmd --perm --zone=internal --remove-service=samba-client
 firewall-cmd --perm --zone=internal --remove-service=dhcpv6-client
 
+echo "Alt er opsat og er klar, maskinen genstarter."
+
 #Holder lige 10 sek pause.
 sleep 10s
 
