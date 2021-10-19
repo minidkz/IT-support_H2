@@ -3,7 +3,7 @@
 #Opdatering
 echo "Serveren opdateres!"
 dnf upgrade -y -q
-dnf install nano
+dnf install nano -y -q
 echo "==== Serveren er opdateret! ===="
 
 # Ændre hostname
