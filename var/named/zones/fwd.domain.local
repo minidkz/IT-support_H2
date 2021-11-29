@@ -1,0 +1,21 @@
+$TTL 86400
+@ IN SOA dns-primary.nisseland.local. admin.nisseland.local (
+  2020080302 ;Serial
+  7200 ;Refresh
+  3600 ;Retry
+  1209600 ;Expire
+  3600 ;Minimum TTL
+)
+
+;Name Server Infomation
+@ IN NS dns-primary.nisseland.local.
+
+;IP Address for Name Server
+dns-primary IN A 192.168.0.6
+
+;A Record for the following Host name
+www IN  A 192.168.0.4
+db  IN  A 192.168.0.5
+
+;CNAME Record
+ftp IN CNAME www.nisseland.local
