@@ -8,7 +8,7 @@ $TTL 86400
 )
 
 ;Name Server Infomation
-@ IN NS dns-primary.nisseland.local.
+@ IN NS ns1.nisseland.local.
 
 ;IP Address for Name Server
 dns-primary IN A 192.168.0.6
