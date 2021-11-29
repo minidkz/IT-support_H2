@@ -1,0 +1,21 @@
+$TTL 86400
+@ IN SOA ns2.nisseland.local. nisseland.local (
+  2020080302 ;Serial
+  7200 ;Refresh
+  3600 ;Retry
+  1209600 ;Expire
+  3600 ;Minimum TTL
+)
+
+;Name Server Infomation
+@ IN NS ns1.nisseland.local.
+@ IN NS ns2.nisseland.local.
+
+;A Record for the following Host name
+router IN A 192.168.0.1
+jump IN A 192.168.0.2
+storage IN A 192.168.0.3
+www IN  A 192.168.0.4
+db  IN  A 192.168.0.5
+ns1 IN A 192.168.0.6
+ns2 IN A 192.168.0.7
