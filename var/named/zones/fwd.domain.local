@@ -9,9 +9,7 @@ $TTL 86400
 
 ;Name Server Infomation
 @ IN NS ns1.nisseland.local.
-
-;IP Address for Name Server
-dns-primary IN A 192.168.0.6
+@ IN NS ns2.nisseland.local.
 
 ;A Record for the following Host name
 router IN A 192.168.0.1
@@ -21,8 +19,3 @@ www IN  A 192.168.0.4
 db  IN  A 192.168.0.5
 ns1 IN A 192.168.0.6
 ns2 IN A 192.168.0.7
-
-;CNAME Record
-ftp IN CNAME www.nisseland.local
-www IN CNAME intra.nisseland.local
-www IN CNAME blog.nisseland.local
