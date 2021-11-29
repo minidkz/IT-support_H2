@@ -1,5 +1,5 @@
 $TTL 86400
-@ IN SOA dns-primary.nisseland.local. admin.nisseland.local. (
+@ IN SOA ns1.nisseland.local. nisseland.local. (
   2020080302 ;Serial
   7200 ;Refresh
   3600 ;Retry
@@ -9,7 +9,10 @@ $TTL 86400
 
 ;Name Server Infomation
 @ IN NS ns1.nisseland.local.
-@ IN NS ns2.nisseland.local.
+
+;IP address of Name Server
+ns1 IN  A 192.168.0.6
+ns2 IN  A 192.168.0.7
 
 ;PTR Record IP address to Hostname
 1 IN  PTR router
