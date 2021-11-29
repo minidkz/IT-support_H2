@@ -24,5 +24,5 @@ ns2 IN A 192.168.0.7
 
 ;CNAME Record
 ftp IN CNAME www.nisseland.local
-ftp IN CNAME intra.nisseland.local
-ftp IN CNAME blog.nisseland.local
+www IN CNAME intra.nisseland.local
+www IN CNAME blog.nisseland.local
