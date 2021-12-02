@@ -4,6 +4,7 @@
 echo "Serveren opdateres!"
 dnf upgrade -y -q
 dnf install nano -y
+dnf install maria-db-server -y
 echo "==== Serveren er opdateret! ===="
 
 #Ændre hostname
