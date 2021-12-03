@@ -12,6 +12,6 @@ $TTL 5m
 2  IN  PTR  jump.nisseland.local.
 3  IN  PTR  storage.nisseland.local.
 4  IN  PTR  www.nisseland.local.
-IN  PTR  blog.nisseland.local.
-IN  PTR  intra.nisseland.local.
+   IN  PTR  blog.nisseland.local.
+   IN  PTR  intra.nisseland.local.
 5  IN  PTR  db.nisseland.local.
