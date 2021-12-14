@@ -1,0 +1,63 @@
+en
+conf t
+
+interface range f0/1-24, g0/1-2
+shut
+do wr
+exit
+
+interface range f0/1-24, g0/1-2
+switchport port-security maximum 4
+switchport port-security mac-address sticky
+switchport port-security violation restrict
+do wr
+exit
+
+interface range f0/1-2, f0/6-7, f0/11-13, f0/16-18, g0/1-2, f0/21-24
+no shut
+do wr
+exit
+
+--------------------------------------------
+
+en
+conf t
+
+interface range f0/1-24, g0/1-2
+shut
+do wr
+exit
+
+interface range f0/1-24, g0/1-2
+switchport port-security maximum 4
+switchport port-security mac-address sticky
+switchport port-security violation restrict
+do wr
+exit
+
+interface range f0/1-8, f0/11-13, f0/16-18, f0/21-24
+no shut
+do wr
+exit
+
+--------------------------------------------
+
+en
+conf t
+
+interface range f0/1-24, g0/1-2
+shut
+do wr
+exit
+
+interface range f0/1-24, g0/1-2
+switchport port-security maximum 4
+switchport port-security mac-address sticky
+switchport port-security violation restrict
+do wr
+exit
+
+interface range f0/1-2, f0/16-17, f0/21-24
+no shut
+do wr
+exit
