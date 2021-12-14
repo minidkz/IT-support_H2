@@ -1,0 +1,34 @@
+en
+conf t
+interface g0/1
+ip access-group allow_only_port_80 out
+exit
+
+ip access-list extended allow_only_port_80
+permit tcp host 172.18.1.0 host 172.17.1.3 eq 80
+do wr
+exit
+
+ip access-list extended allow_only_port_80
+permit tcp host 172.18.2.0 host 172.17.1.3 eq 80
+do wr
+exit
+
+--------------------------
+
+en
+conf t
+interface g0/1
+ip access-group unallow_only_port_80 out
+exit
+
+ip access-list extended allow_only_port_80
+deny tcp host 172.18.1.0 host 172.17.1.3 eq 80
+do wr
+exit
+
+ip access-list extended unallow_only_port_80
+deny tcp host 172.18.2.0 host 172.17.1.3 eq 80
+do wr
+exit
+
