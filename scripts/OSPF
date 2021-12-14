@@ -1,0 +1,99 @@
+!Her laver jeg en OSPF
+en
+conf t
+router ospf 10
+default-infomation originate
+router-id 6.6.6.6
+network 10.0.1.0 0.0.0.7 area 0
+network 10.0.0.12 0.0.0.3 area 0
+network 64.0.100.0 0.0.0.3 area 0
+passive-interface Se0/1/1
+auto-cost reference-bandwidth 10000
+end
+clear ip ospf process
+yes
+conf t
+ip route 0.0.0.0 0.0.0.0 Se0/1/1
+interface se0/1/0
+ip ospf hello-interval 20
+ip ospf dead-interval 80
+ip ospf 10 area 0
+end
+conf t
+interface gig0/0/0
+ip ospf priority 255
+ip ospf 10 area 0
+do wr
+end
+
+!!!!!!!!!!!!!!!!
+
+!Her laver jeg en OSPF
+en
+conf t
+router ospf 10
+default-infomation originate
+router-id 5.5.5.5
+network 10.0.1.0 0.0.0.7 area 0
+network 192.168.4.0 0.0.0.0 area 0
+passive-interface Gig0/0/0
+auto-cost reference-bandwidth 10000
+end
+clear ip ospf process
+yes
+conf t
+interface range gig0/0/0, gig0/0/1
+ip ospf priority 255
+ip ospf 10 area 0
+do wr
+end
+
+!!!!!!!!!!!!!!!!
+
+!Her laver jeg en OSPF
+en
+conf t
+router ospf 10
+default-infomation originate
+router-id 4.4.4.4
+network 10.0.1.0 0.0.0.7 area 0
+network 192.168.5.0 0.0.0.0 area 0
+passive-interface Gig0/0/0
+auto-cost reference-bandwidth 10000
+end
+clear ip ospf process
+yes
+conf t
+interface range gig0/0/0, gig0/0/1
+ip ospf priority 255
+ip ospf 10 area 0
+do wr
+end
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+en
+conf t
+router ospf 10
+default-infomation originate
+network 10.0.0.12 0.0.0.3 area 0
+network 10.0.0.0 0.0.0.3 area 0
+network 10.0.0.8 0.0.0.3 area 0
+auto-cost reference-bandwidth 10000
+end
+clear ip ospf process
+yes
+conf t
+interface se0/1/1
+ip ospf cost 50
+ip ospf hello-interval 20
+ip ospf dead-interval 80
+ip ospf 10 area 0
+do wr
+end
+
+!!!!!!!!!!!!!!!!
+
+
+
+
