@@ -1,0 +1,51 @@
+en
+conf t
+ip dhcp excluded-address 192.168.10.1 192.168.10.29
+ip dhcp excluded-address 192.168.10.201 192.168.10.254
+ip dhcp pool lan-pool-10
+network 192.168.10.0 255.255.255.0
+default-router 192.168.10.1
+dns-server 8.8.8.8
+domain-name nisseland.dk
+end
+conf t
+do wr
+
+
+conf t
+ip dhcp excluded-address 192.168.20.1 192.168.20.29
+ip dhcp excluded-address 192.168.20.201 192.168.20.254
+ip dhcp pool lan-pool-20
+network 192.168.20.0 255.255.255.0
+default-router 192.168.20.1
+dns-server 8.8.8.8
+domain-name nisseland.dk
+end
+conf t
+do wr
+
+
+conf t
+ip dhcp excluded-address 192.168.30.1 192.168.30.29
+ip dhcp excluded-address 192.168.30.201 192.168.30.254
+ip dhcp pool lan-pool-30
+network 192.168.30.0 255.255.255.0
+default-router 192.168.30.1
+dns-server 8.8.8.8
+domain-name nisseland.dk
+end
+conf t
+do wr
+
+
+conf t
+ip dhcp excluded-address 192.168.40.1 192.168.40.29
+ip dhcp excluded-address 192.168.40.201 192.168.40.254
+ip dhcp pool lan-pool-40
+network 192.168.40.0 255.255.255.0
+default-router 192.168.40.1
+dns-server 8.8.8.8
+domain-name nisseland.dk
+end
+conf t
+do wr
